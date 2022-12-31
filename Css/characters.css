@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@900&family=Noto+Naskh+Arabic:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  text-align: right;
+}
+header {
+  background-color: #bf905140;
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  font-family: "El Messiri", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 200px;
+}
+
+.logo {
+  align-items: center;
+  /* top: 10px; */
+  /* left: 150px; */
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3.8em;
+}
+
+.ph-logo {
+  width: 90px;
+  height: 85px;
+  position: absolute;
+  top: 2px;
+  right: 100px;
+  padding-top: 3px;
+  padding-right: 10px;
+}
+
+.nav-i {
+  /* position: absolute; */
+  top: 18px;
+  font-size: larger;
+  left: 100px;
+  align-items: center;
+}
+
+.nav-i a {
+  text-decoration: none;
+  color: rgba(9, 9, 9, 0.638);
+  font-weight: bold;
+  font-size: 1.92em;
+  padding-left: 60px;
+  align-items: center;
+}
+
+.nav-i a:hover {
+  color: rgb(7, 7, 7);
+}
+
+.sxstion {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Naskh Arabic", "Alexandria", serif, sans-serif;
+  background: linear-gradient(90deg, #fff 50%, #bf905140 50%);
+}
+
+input {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.book {
+  display: flex;
+}
+
+#cover {
+  width: 450px;
+  height: 600px;
+}
+
+.h-cover {
+  color: #3459a5;
+  font-size: 2.5em;
+  font-family: "El Messiri", sans-serif;
+  margin-top: 200px;
+}
+
+.p-cover {
+  text-align: center;
+  color: #3459a5;
+  font-size: 2.5em;
+  margin-top: 5px;
+  font-family: "El Messiri", sans-serif;
+}
+
+.flip-book {
+  width: 450px;
+  height: 600px;
+  position: relative;
+  perspective: 1500px;
+}
+
+.flip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: 0.5s;
+}
+h2 {
+  text-align: center;
+}
+p {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0 13px;
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0, 0.5) 0 2px 5px
+    rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background-color: #000;
+  border-radius: 30px;
+}
+
+.next-btn {
+  position: absolute;
+  font-weight: 900;
+  bottom: 280px;
+  right: -50px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  padding: 10px 10px;
+  border-radius: 15px;
+  font-family: "El Messiri", sans-serif;
+}
+.back-btn {
+  position: absolute;
+  font-weight: 900;
+  bottom: 280px;
+  right: 450px;
+  cursor: pointer;
+  color: rgb(255, 250, 250);
+  background-color: #000000;
+  padding: 10px 10px;
+  border-radius: 15px;
+  font-family: "El Messiri", sans-serif;
+}
+
+#p1 {
+  z-index: 5;
+}
+#p2 {
+  z-index: 4;
+}
+#p3 {
+  z-index: 3;
+}
+
+#p4 {
+  z-index: 2;
+}
+#p5 {
+  z-index: 1;
+}
+
+#c1:checked ~ .flip-book #p1 {
+  transform: rotateY(-180deg);
+  z-index: 1;
+}
+
+#c2:checked ~ .flip-book #p2 {
+  transform: rotateY(-180deg);
+  z-index: 2;
+}
+
+#c3:checked ~ .flip-book #p3 {
+  transform: rotateY(-180deg);
+  z-index: 3;
+}
+
+#c4:checked ~ .flip-book #p4 {
+  transform: rotateY(-180deg);
+  z-index: 4;
+}
+#c5:checked ~ .flip-book #p5 {
+  transform: rotateY(-180deg);
+  z-index: 5;
+}
